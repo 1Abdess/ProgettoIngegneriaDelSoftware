@@ -40,6 +40,9 @@ dependencies {
     implementation 'org.mapstruct:mapstruct:1.5.5.Final'
     annotationProcessor 'org.mapstruct:mapstruct-processor:1.5.5.Final'
 
+    //Libreria Json Web Token (non faccio la richiesta di login per ogni endpoint)
+    implementation 'com.auth0:java-jwt:4.4.0'
+
 
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'org.springframework.security:spring-security-test'
