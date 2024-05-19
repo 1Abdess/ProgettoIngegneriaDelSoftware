@@ -45,4 +45,18 @@ public class UtenteService {
         Utente utenteSalvato = utenteRepository.save(utente);
         return utenteMapper.toUtenteDto(utenteSalvato);
     }
+
+    public UtenteDto getUtenteByCodiceFiscale(String codiceFiscale) {
+        Optional<Utente> optionalUtente = utenteRepository.findByCodiceFiscale(codiceFiscale);
+
+        if (optionalUtente.isPresent()) {
+            Utente utente = optionalUtente.get();
+            return utenteMapper.toUtenteDto(utente);
+        }
+        else {
+            return null;
+        }
+    }
+
+
 }
