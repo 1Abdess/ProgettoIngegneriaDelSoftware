@@ -13,6 +13,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.net.URI;
 
+/*
+    In questo file avrò i due controller di tipo (POST) REST: uno per il login e uno per la registrazione.
+    Alla fine si restituisce sempre un file JSON con i relativi dati e l'accesso (garantito o meno) dell'utente.
+*/
+
 @RestController
 @RequiredArgsConstructor
 public class AutenticazioneController {

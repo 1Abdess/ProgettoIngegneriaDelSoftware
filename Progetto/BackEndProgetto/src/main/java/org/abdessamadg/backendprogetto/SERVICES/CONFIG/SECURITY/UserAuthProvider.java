@@ -22,11 +22,15 @@ public class UserAuthProvider {
     @Value("${security.jwt.token.secret-key:secret-key}")
     private String chiaveSegreta;
 
+
+    //Inizializzo la chiave segreta per la firma del token utilizzando l'algoritmo HMAC256 e codifica in Base64.
     @PostConstruct
     protected void init(){
         chiaveSegreta = Base64.getEncoder().encodeToString(chiaveSegreta.getBytes());
     }
 
+
+    //Creo un nuovo token JWT con i dati forniti dall'oggetto UtenteDto
     public String createToken(UtenteDto utenteDto) {
         //Voglio che il token sia valido per 1 ora
         Date oraCreazioneToken = new Date();
@@ -42,6 +46,9 @@ public class UserAuthProvider {
                 .sign(algorithm);
     }
 
+
+    //Verifica la validità di un token JWT ricevuto e restituisce un'istanza di autenticazione Spring Security
+    // contenente le informazioni dell'utente estratte dal token
     public Authentication validazioneToken(String token){
         Algorithm algorithm = Algorithm.HMAC256(chiaveSegreta);
         JWTVerifier verifier = JWT.require(algorithm)

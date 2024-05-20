@@ -5,6 +5,10 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+/*
+    E' una DTO per trasmettere informazioni su un utente tra diversi componenti dell'applicazione.
+*/
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor

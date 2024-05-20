@@ -9,6 +9,15 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+/*
+    Definisco una classe UTENTE di tipo ORM (Object-Relational Mapping).
+    A cosa serve?
+    Serve per mappare gli attributi alle colonne della mia tabella all'interno del DB.
+
+    Lombok mi semplifica ulteriormente lo sviluppo del programma poichè non ho bisogno di impostare ne
+    costruttori ne getter/setter. E' tutto automatico.
+*/
+
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder

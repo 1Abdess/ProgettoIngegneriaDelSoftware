@@ -11,6 +11,14 @@ import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.www.BasicAuthenticationFilter;
 
+/*
+    Sto configurando Spring Security per gestire l'autenticazione tramite tojen JWT.
+    Disabilito il controllo CSRF (Cross-Site Request Forgery) ovvero che le richieste non devono includere un token
+    CSRF.
+
+    Definisco le regole di autorizzazione per le richieste HTTP.
+*/
+
 @RequiredArgsConstructor
 @Configuration
 @EnableWebSecurity

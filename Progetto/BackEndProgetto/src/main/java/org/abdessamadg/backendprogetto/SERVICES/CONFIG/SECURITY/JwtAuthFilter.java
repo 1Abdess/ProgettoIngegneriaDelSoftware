@@ -11,6 +11,14 @@ import org.springframework.web.filter.OncePerRequestFilter;
 
 import java.io.IOException;
 
+/*
+    Sto implementando un filtro che controlla le richieste HTTP per token JWT.
+    Quando una richiesta HTTP arriva al server, questo filtro controlla se contiene un token JWT
+    nell'intestazione di autorizzazione.
+    Se sì, il filtro verifica la validità del token utilizzando un'istanza di UserAuthProvider.
+    Se il token è valido, imposta l'autenticazione nel contesto di sicurezza di Spring.
+*/
+
 @RequiredArgsConstructor
 public class JwtAuthFilter extends OncePerRequestFilter {
     private final UserAuthProvider userAuthProvider;
@@ -44,7 +52,5 @@ public class JwtAuthFilter extends OncePerRequestFilter {
         }
 
         filterChain.doFilter(request, response);
-
     }
-
 }

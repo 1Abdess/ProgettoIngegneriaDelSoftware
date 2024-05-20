@@ -5,7 +5,9 @@ import org.springframework.stereotype.Component;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
-
+/*
+    Fornisco na configurazione per la codifica delle password all'interno della mia app
+*/
 
 @Component
 public class PasswordConfig {
