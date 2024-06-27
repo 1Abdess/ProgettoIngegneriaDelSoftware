@@ -18,7 +18,7 @@
   
     
               <button type="submit" class="mt-5 bg-green-500 hover:bg-blue-700 shadow-xl text-white uppercase text-sm font-semibold px-14 py-3 rounded">
-              Login
+              REGISTRATI
               </button>
           </form>
       </div>
@@ -68,6 +68,5 @@
   </script>
   
   <style scoped>
-  /* I tuoi stili rimangono invariati */
   </style>
   

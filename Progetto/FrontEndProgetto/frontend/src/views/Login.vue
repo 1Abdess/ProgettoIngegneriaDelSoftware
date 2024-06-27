@@ -14,7 +14,7 @@
             
             <!-- Cambiato il testo del pulsante a "Registrati" -->
             <button type="submit" class="mt-5 bg-green-500 hover:bg-blue-700 shadow-xl text-white uppercase text-sm font-semibold px-14 py-3 rounded">
-                Registrati
+              LOGIN
             </button>
         </form>
     </div>
@@ -64,5 +64,4 @@ export default {
 </script>
 
 <style scoped>
-/* I tuoi stili rimangono invariati */
 </style>

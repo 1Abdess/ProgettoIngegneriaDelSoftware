@@ -17,5 +17,4 @@ export default {
 </script>
 
 <style scoped>
-/* Stili specifici per questa pagina */
 </style>

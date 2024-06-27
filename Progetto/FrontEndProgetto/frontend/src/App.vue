@@ -3,7 +3,8 @@
     <router-link to="/">Home</router-link> |
     <router-link to="/registrazione">Registrazione</router-link> |
     <router-link to="/login">Login</router-link> |
-    <router-link to="/profilazione">Profilazione</router-link>
+    <router-link to="/profilazione">Profilazione</router-link> |
+    <router-link to="/modifica">Modifica</router-link>
   </nav>
   <router-view/>
 </template>

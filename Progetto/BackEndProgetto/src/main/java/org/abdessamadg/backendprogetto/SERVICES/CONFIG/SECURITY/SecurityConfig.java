@@ -32,6 +32,7 @@ public class SecurityConfig {
                 .sessionManagement(customizer -> customizer.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(request ->
                         request
+                                .requestMatchers(HttpMethod.PUT, "/modifica/**").permitAll()
                                 .requestMatchers(HttpMethod.POST, "/login", "/registrazione").permitAll()
                                 .requestMatchers(HttpMethod.GET, "/profilazione/**", "/prova").permitAll()
                                 .anyRequest().authenticated()

@@ -74,5 +74,20 @@ public class UtenteService {
         }
     }
 
+    // Aggiornamento dell'utente
+    public UtenteDto aggiornaUtente(UtenteDto utenteDto) {
+        Optional<Utente> optionalUtente = utenteRepository.findByCodiceFiscale(utenteDto.getCodiceFiscale());
+        if (optionalUtente.isPresent()) {
+            Utente utente = optionalUtente.get();
+            utente.setNome(utenteDto.getNome());
+            utente.setCognome(utenteDto.getCognome());
+            utente.setOrganizzazione(utenteDto.getOrganizzazione());
+            utente.setCategoria(utenteDto.getCategoria());
+            utente.setUrlFotoProfilo(utenteDto.getUrlFotoProfilo());
 
+            utenteRepository.save(utente);
+            return utenteMapper.toUtenteDto(utente);
+        }
+        throw new AppException("Utente non trovato", HttpStatus.NOT_FOUND);
+    }
 }

@@ -4,6 +4,7 @@ import HomeView from '../views/Home.vue'
 import LoginView from '../views/Login.vue'
 import RegistrazioneView from '../views/Registrazione.vue'
 import ProfilazioneView from '../views/Profilazione.vue'
+import ModificaView from '../views/Modifica.vue'
 
 
 const routes = [
@@ -26,6 +27,11 @@ const routes = [
     path: '/profilazione',
     name: 'profilazione',
     component: ProfilazioneView
+  },
+  {
+    path: '/modifica',
+    name: 'modifica',
+    component: ModificaView
   }
 ]
 
