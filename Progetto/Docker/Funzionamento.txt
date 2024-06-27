@@ -1,0 +1,23 @@
+prima di tutto devo "avvisare" spring boot che sto accedendo al database tramite docker.
+sto usando la versione docker di windows con sottosistema wsl 2.
+
+nel codice modifico:
+spring.datasource.url=jdbc:mysql://host.docker.internal:3306/ProgettoIngSW
+
+Ora entro su intellij e avvio il comando:
+./gradlew bootJar
+che mi permette di creare il file .JAR complessivo del mio progetto
+
+copio il file jar che ho ottenuto dentro alla cartella /docker e sul terminale inserisco:
+sudo docker build -t ing-sw-backend .
+per creare il container che farà funzionare la mia applicazione
+
+per concludere avvio il mio container, dicendo che sto usando la rete locale e non una rete dockerizzata
+sudo docker run --network host -p 8080:8080 ing-sw-backend
+
+
+
+//////////////////////////////////
+EXTRA
+per vedere il numero di container all'interno del mio computer inserisco il comando:
+sudo docker container ls
