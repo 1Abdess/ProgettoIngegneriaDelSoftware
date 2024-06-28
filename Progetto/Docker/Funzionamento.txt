@@ -13,7 +13,7 @@ sudo docker build -t ing-sw-backend .
 per creare il container che farà funzionare la mia applicazione
 
 per concludere avvio il mio container, dicendo che sto usando la rete locale e non una rete dockerizzata
-sudo docker run --network host -p 8080:8080 ing-sw-backend
+docker run -it -p 8080:8080 ing-sw-backend
 
 
 
