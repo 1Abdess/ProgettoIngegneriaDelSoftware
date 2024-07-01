@@ -9,7 +9,7 @@ Ora entro su intellij e avvio il comando:
 che mi permette di creare il file .JAR complessivo del mio progetto
 
 copio il file jar che ho ottenuto dentro alla cartella /docker e sul terminale inserisco:
-sudo docker build -t ing-sw-backend .
+docker build -t ing-sw-backend .
 per creare il container che farà funzionare la mia applicazione
 
 per concludere avvio il mio container, dicendo che sto usando la rete locale e non una rete dockerizzata
