@@ -20,4 +20,4 @@ docker run -it -p 8080:8080 ing-sw-backend
 //////////////////////////////////
 EXTRA
 per vedere il numero di container all'interno del mio computer inserisco il comando:
-sudo docker container ls
+docker container ls
